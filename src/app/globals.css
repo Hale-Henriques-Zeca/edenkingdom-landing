@@ -1,26 +1,167 @@
 @import "tailwindcss";
 
+/* 🌍 EdenKingDom — Identidade Institucional */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --blue-deep: #1C2D5A;
+  --olive: #708238;
+  --pearl: #FDFDFD;
+  --gold: #D4AF37;
+
+  --background: var(--pearl);
+  --foreground: #1a1a1a;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
+/* 🌙 Dark preference (soft – not black) */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #f5f6f7;
+    --foreground: #1a1a1a;
   }
 }
 
+/* 📱 Global body reset (institutional & ultra-compatible) */
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* 🚫 Remover resíduos do Google Translate */
+.goog-te-banner-frame,
+.goog-logo-link,
+.goog-te-gadget,
+.goog-te-gadget-simple,
+.skiptranslate {
+  display: none !important;
+}
+
+body > .skiptranslate > iframe {
+  display: none !important;
+}
+
+/* ❄️ Snow Effect (neutral & safe) */
+.snowflake {
+  position: fixed;
+  top: -10px;
+  font-size: 1.2rem;
+  color: white;
+  pointer-events: none;
+  animation: fall linear forwards;
+  z-index: 40;
+  opacity: 0.8;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+  }
+}
+
+/* 🌀 Animações suaves (institucional) */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 28s linear infinite;
+}
+
+@keyframes fade-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 1.2s ease-out forwards;
+}
+
+/* 📱 Ultra-small devices (≤360px) */
+@media (max-width: 360px) {
+  h1 {
+    font-size: 1.7rem;
+    line-height: 2.1rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  * {
+    animation-duration: 1.5s !important;
+  }
+}
+
+/* 🎬 Cinematic Ambient Background */
+.cinematic-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.cinematic-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 30%, rgba(112,130,56,0.15), transparent 45%),
+    radial-gradient(circle at 80% 20%, rgba(28,45,90,0.18), transparent 50%),
+    radial-gradient(circle at 50% 80%, rgba(212,175,55,0.12), transparent 55%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+
+/* 🎥 Cinematic entrance (Apple-style motion) */
+@keyframes cinematic-rise {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-cinematic {
+  animation: cinematic-rise 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+
+/* 🪟 Institutional Glass Panel */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.06),
+    inset 0 1px 0 rgba(255,255,255,0.6);
+}
+
+
+/* 🏛️ Logo EdenKingDom — entrada institucional */
+@keyframes logo-fade-rise {
+  from {
+    opacity: 0;
+    transform: translateY(-18px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-logo {
+  animation: logo-fade-rise 1.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
