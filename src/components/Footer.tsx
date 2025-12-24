@@ -8,8 +8,9 @@ export default function Footer() {
         <Link href="https://instagram.com/edenkingdom.corp" target="_blank">📸 Instagram</Link>
         <Link href="https://x.com/EdenKingDomCorp" target="_blank">X—Twitter</Link>
         <Link href="https://youtube.com/channel/UCA7ndIm6iUhybDU72KxcLKg" target="_blank">📺 YouTube</Link>
-        <Link href="https://t.me/EKDCorp" target="_blank">💬 Telegram</Link>
-        <Link href="https://whatsapp.com/channel/0029VbBhPltJpe8j9HOdF501" target="_blank">📞 WhatsApp</Link>
+        <Link href="https://t.me/EKDCorp" target="_blank">📢 Telegram Canal</Link>
+         <Link href="https://t.me/EdenKingDom" target="_blank">💬 Telegram Grupo</Link>
+        <Link href="https://whatsapp.com/channel/0029VbBhPltJpe8j9HOdF501" target="_blank">📢 WhatsApp Canal</Link>
 <Link href="/whitepaper">Whitepaper</Link>
         <Link href="/privacy">Privacidade</Link>
         <Link href="/terms">Termos</Link>
