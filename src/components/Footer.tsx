@@ -6,15 +6,17 @@ export default function Footer() {
       <div className="flex flex-wrap justify-center gap-4 mb-4">
 
         <Link href="https://instagram.com/edenkingdom.corp" target="_blank">📸 Instagram</Link>
-        <Link href="https://x.com/EdenKingDomCorp" target="_blank">🕊 X</Link>
+        <Link href="https://x.com/EdenKingDomCorp" target="_blank">X—Twitter</Link>
         <Link href="https://youtube.com/channel/UCA7ndIm6iUhybDU72KxcLKg" target="_blank">📺 YouTube</Link>
         <Link href="https://t.me/EKDCorp" target="_blank">💬 Telegram</Link>
         <Link href="https://whatsapp.com/channel/0029VbBhPltJpe8j9HOdF501" target="_blank">📞 WhatsApp</Link>
-
+<Link href="/whitepaper">Whitepaper</Link>
+        <Link href="/privacy">Privacidade</Link>
+        <Link href="/terms">Termos</Link>
       </div>
 
       <p className="text-gray-500 max-w-xl mx-auto">
-        © {new Date().getFullYear()} EdenKingDom Corporation ·
+        © {new Date().getFullYear()} EdenKingDom Corporation —
         Built from Genesis, Designed for Eternity.
       </p>
 

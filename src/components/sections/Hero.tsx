@@ -26,15 +26,8 @@ export default function Hero() {
   }, []);
 
   return (
-    <section
-  className="
-    relative min-h-screen
-    flex flex-col items-center justify-center
-    text-center px-4 sm:px-6
-    overflow-hidden
-    bg-[#1C2D5A]
-  "
->
+    <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-6 overflow-hidden bg-[#1C2D5A]">
+
 
 <LogoAnimated />
       {/* Mensagem principal */}
@@ -56,7 +49,7 @@ export default function Hero() {
         oficialmente até <strong>Março de 2026</strong>.
       </p>
 
-      <div className="bg-white/70 backdrop-blur-md border border-gold/30 rounded-2xl px-8 py-6 shadow-xl max-w-xl">
+      <div className="bg-[#FDFDFD]/70 backdrop-blur-md border border-[#708238]/30 rounded-2xl px-8 py-6 shadow-xl max-w-xl">
         <p className="text-deepblue font-semibold mb-2">
           🌱 Estamos a construir uma Civilização Corporativa Consciente
         </p>

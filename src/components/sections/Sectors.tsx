@@ -1,23 +1,23 @@
 export default function Sectors() {
   const data = [
     "EdenKingDom Farm",
-    "EdenKingDom Build",
+    "EdenKingDom Transports",
     "EdenKingDom Engineering",
-    "EdenKingDom MoveLog",
+    "EdenKingDom Social",
     "EdenKingDom FlyLog",
-    "EdenKingDom General clinic",
+    "EdenKingDom Hospitals",
     "EdenKingDom Learn",
     "EdenKingDom City",
-    "EdenKingDom Plastics",
+    "EdenKingDom Motors",
     "EdenKingDom Recycling",
-    "EdenKingDom Paper Industry",
-    "EdenKingDom Steel & Manufacturing",
-    "EdenKingDom Energy",
+    "EdenKingDom CityClean",
+    "EdenKingDom Law",
+    "EdenKingDom Industries",
     "EdenKingDom ExpressLog",
     "EdenKingDom Pay (E-Pay)",
     "EdenKingDom Buy Crypto (EBC)",
     "EdenKingDom Wallet (E-Wallet)",
-    "EdenKingDom PrintArt",
+    "EdenKingDom Print",
     "EdenKingDom SonyCine",
     "EdenKingDom News",
     "EdenKingDom Hope",
@@ -27,9 +27,9 @@ export default function Sectors() {
     "EdenKingDom Shareholder",
     "EdenKingDom Academy",
     "EdenKingDom Innovation Center",
-    "EdenKingDom Ice Industry",
-    "EdenKingDom CarpintArt",
-    "EdenKingDom Stores & Markets",
+    "EdenKingDom Stay",
+    "EdenKingDom Office",
+    "EdenKingDom Markets",
     "EdenKingDom Tourism",
     "Etc",
   ];
@@ -37,7 +37,7 @@ export default function Sectors() {
   return (
     <section
       id="sectors"
-      className="py-20 bg-white border-t border-gold/20"
+      className="py-20 bg-[#FDFDFD] border-t border-gold/20"
     >
       <h2 className="text-4xl text-center text-deepblue font-bold mb-10">
         Divisões Corporativas

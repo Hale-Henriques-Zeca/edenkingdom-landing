@@ -4,20 +4,30 @@ import { useEffect, useState } from "react";
 
 export default function Countdown() {
   const targetDate = new Date("2026-03-31T23:59:59").getTime();
-  const [timeLeft, setTimeLeft] = useState(targetDate - Date.now());
+
+  const [mounted, setMounted] = useState(false);
+  const [timeLeft, setTimeLeft] = useState(0);
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setTimeLeft(targetDate - Date.now());
-    }, 1000);
+    setMounted(true);
 
+    const update = () => {
+      setTimeLeft(Math.max(targetDate - Date.now(), 0));
+    };
+
+    update(); // primeira execução no client
+
+    const timer = setInterval(update, 1000);
     return () => clearInterval(timer);
   }, [targetDate]);
 
-  const days = Math.max(Math.floor(timeLeft / (1000 * 60 * 60 * 24)), 0);
-  const hours = Math.max(Math.floor((timeLeft / (1000 * 60 * 60)) % 24), 0);
-  const minutes = Math.max(Math.floor((timeLeft / (1000 * 60)) % 60), 0);
-  const seconds = Math.max(Math.floor((timeLeft / 1000) % 60), 0);
+  // ⛔️ NÃO renderiza nada durante SSR
+  if (!mounted) return null;
+
+  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
+  const seconds = Math.floor((timeLeft / 1000) % 60);
 
   return (
     <div className="mt-12 text-center">
